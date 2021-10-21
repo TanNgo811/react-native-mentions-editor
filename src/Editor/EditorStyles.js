@@ -3,8 +3,7 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
   container: {
     backgroundColor: "#fff",
-    borderColor: "#ffd4d4",
-    borderWidth: 1,
+    borderRadius: 10,
     width: "100%",
   },
   textContainer: {
@@ -21,7 +20,6 @@ export default StyleSheet.create({
     minHeight: 40,
     position: "absolute",
     top: 0,
-    color: "transparent",
     alignSelf: "stretch",
     width: "100%",
   },
