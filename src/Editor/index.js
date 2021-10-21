@@ -26,7 +26,8 @@ export class Editor extends React.Component {
     onHideMentions: PropTypes.func,
     editorStyles: PropTypes.object,
     placeholder: PropTypes.string,
-    renderMentionList: PropTypes.func
+    renderMentionList: PropTypes.func,
+    onChangeListUser: PropTypes.func,
   };
 
   constructor(props) {
@@ -167,6 +168,7 @@ export class Editor extends React.Component {
       const keywordArray = str.match(pattern);
       if (keywordArray && !!keywordArray.length) {
         const lastKeyword = keywordArray[keywordArray.length - 1];
+        this.props.onChangeListUser(lastKeyword);
         this.updateSuggestions(lastKeyword);
       }
     }
@@ -252,7 +254,7 @@ export class Editor extends React.Component {
       menIndex
     );
 
-    const username = `@${user.username}`;
+    const username = `@${user.displayName}`;
     const text = `${initialStr}${username} ${remStr}`;
     //'@[__display__](__id__)' ///find this trigger parsing from react-mentions
 
@@ -326,7 +328,7 @@ export class Editor extends React.Component {
       lastIndex = end + 1;
       formattedText.push(initialStr);
       const formattedMention = this.formatMentionNode(
-        `@${men.username}`,
+        `@${men.displayName}`,
         `${start}-${men.id}-${end}`
       );
       formattedText.push(formattedMention);
@@ -349,7 +351,7 @@ export class Editor extends React.Component {
         start === 1 ? "" : inputText.substring(lastIndex, start);
       lastIndex = end + 1;
       formattedText = formattedText.concat(initialStr);
-      formattedText = formattedText.concat(`@[${men.username}](id:${men.id})`);
+      formattedText = formattedText.concat(`@[${men.displayName}](id:${men.id})`);
       if (
         EU.isKeysAreSame(EU.getLastKeyInMap(this.mentionsMap), [start, end])
       ) {

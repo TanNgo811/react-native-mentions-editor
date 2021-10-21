@@ -1,6 +1,6 @@
 {
   "name": "@ngotientan/react-native-mentions-editor",
-  "version": "1.0.17",
+  "version": "1.0.19",
   "description": "Mentions for React-Native. Tested on iOS. Should work on Android.",
   "main": "index.js",
   "scripts": {
