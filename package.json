@@ -1,6 +1,6 @@
 {
-  "name": "@trantienhd97/react-native-mentions-editor",
-  "version": "1.0.12",
+  "name": "@ngotientan/react-native-mentions-editor",
+  "version": "1.0.17",
   "description": "Mentions for React-Native. Tested on iOS. Should work on Android.",
   "main": "index.js",
   "scripts": {
@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/trantienhd97/react-native-mentions-editor"
+    "url": "https://github.com/TanNgo811/react-native-mentions-editor"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "react-native-mentions",
@@ -24,10 +24,10 @@
     "android",
     "mentions"
   ],
-  "author": "trantien <trantien97ptit@gmail.com>",
+  "author": "TanNgo811 <ngotientan811@gmail.com>",
   "license": "",
   "bugs": {
-    "url": "https://github.com/trantienhd97/react-native-mentions-editor/issues"
+    "url": "https://github.com/TanNgo811/react-native-mentions-editor/issues"
   },
-  "homepage": "https://github.com/trantienhd97"
+  "homepage": "https://github.com/TanNgo811/react-native-mentions-editor#readme"
 }
